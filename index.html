@@ -89,11 +89,11 @@
               <svg width="24" height="24">
                 <use
                   class="burger__icon-menu"
-                  href="./icons/sprite.svg#menu-burger"
+                  href="./icons/sprite.svg#burger"
                 ></use>
                 <use
                   class="burger__icon-cross"
-                  href="./icons/sprite.svg#menu-cross"
+                  href="./icons/sprite.svg#cross"
                 ></use>
               </svg>
             </button>
@@ -332,11 +332,19 @@
                 </button>
               </div>
               <div class="product__buy-wrapper">
-                <button class="product__buy-button">Купить в 1 клик</button>
+                <button
+                  class="product__buy-button"
+                  data-modal-button="buy"
+                  data-modal-speed="300"
+                >
+                  Купить в 1 клик
+                </button>
                 <button
                   class="product__cart-button"
                   aria-label="Добавить в корзину"
                   title="Добавить в корзину"
+                  data-modal-button="cart"
+                  data-modal-speed="500"
                 >
                   <img
                     src="./icons/cart-icon.svg"
@@ -822,5 +830,88 @@
         <a class="footer__phone" href="tel:+79292992929">+7 (929) 299-29-29</a>
       </div>
     </footer>
+    <div class="modal">
+      <div class="modal__window modal-buy" data-modal-window="buy">
+        <button
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal-buy__content">
+          <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
+          <form class="modal-but__form">
+            <label class="modal-buy__label">
+              <input
+                class="modal-buy__input"
+                type="text"
+                placeholder="Ваше имя"
+                name="name"
+                required
+              />
+            </label>
+            <label class="modal-buy__label">
+              <input
+                class="modal-buy__input"
+                type="tel"
+                placeholder="Номер телефона"
+                name="tel"
+                required
+              />
+            </label>
+            <label class="modal-buy__label">
+              <input
+                class="modal-buy__input"
+                type="email"
+                placeholder="E-mail"
+                name="email"
+                required
+              />
+            </label>
+            <button class="modal-buy__submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal__window modal-buy" data-modal-window="cart">
+        <button
+          class="modal__close"
+          aria-label="Закрыть"
+          title="Закрыть"
+          data-modal-close
+        >
+          <svg width="24" height="24">
+            <use href="./icons/sprite.svg#cross"></use>
+          </svg>
+        </button>
+        <div class="modal__content modal-buy__content">
+          <h3 class="modal-buy__title title-sm">Заявка на заказ</h3>
+          <form class="modal-but__form">
+            <label class="modal-buy__label">
+              <input
+                class="modal-buy__input"
+                type="text"
+                placeholder="Ваше имя"
+                name="name"
+                required
+              />
+            </label>
+            <label class="modal-buy__label">
+              <input
+                class="modal-buy__input"
+                type="tel"
+                placeholder="Номер телефона"
+                name="tel"
+                required
+              />
+            </label>
+            <button class="modal-buy__submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
